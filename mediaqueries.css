@@ -1,6 +1,42 @@
 @charset "UTF-8";
 
-@media (min-width: 376px) {
+@media (min-width: 440px) {
+
+    main {
+        display:grid;
+        width: auto;
+        max-width: 750px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-apresentation {
+        grid-column: 1 / 3;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+    }
+
+    .supervisor-card {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .calculator-card {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .container {
+        margin: 5px;
+    }
+}
+
+@media (min-width: 769px) {
 
     body {
         background-image: url(images/bg.jpg);
@@ -8,11 +44,12 @@
     }
 
     main {
-        width: 1440px;
-        align-items: center;
-
-        grid-template-columns: 1fr 400px 1fr;
-        grid-template-rows: repeat(3 1fr);
+        display: grid;
+        width: auto;
+        max-width: 1440px;
+        height: 750px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
 
         background-color: white;
 
@@ -44,22 +81,26 @@
 
     .content-apresentation {
         grid-column: 1 / 4;
+        height: 200px;
     }
 
     .cards-container {
-        display: grid;
-        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
         grid-column: 2 / 3;
         justify-content: center;
     }
 
     .supervisor-card {
-        grid-column: 1 / 2;
-
-        justify-self: end;
+        grid-row: 2 / 3;
+        height: 230px;
+        align-self: center;
     }
 
     .calculator-card {
         grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        height: 230px;
+        align-self: center;
     }
 }
